@@ -14,11 +14,11 @@ public class Deck : MonoBehaviour
     public List<DeckCardInfo> cardInfos;
     private List<GameObject> deck = new List<GameObject>();
 
-    public void DealToPlayer(GameObject player, int count)
+    public void DealToPlayer(Candidate player, int count)
     {
         for (int i = 0; i < count; i++)
         {
-            player.GetComponent<Candidate>().ReceiveCard(Draw());
+            player.ReceiveCard(Draw());
         }
     }
 

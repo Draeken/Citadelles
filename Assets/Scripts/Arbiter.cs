@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Arbiter : MonoBehaviour
 {
+    [SerializeField]
     [Range(4, 6)]
-    public int PlayerCount = 6;
-    public GameObject playerZone;
+    private int PlayerCount = 6;
 
-    public GameObject deckGameObject;
+    [SerializeField]
+    private Candidate playerZone = null;
+
+    [SerializeField]
+    private GameObject deckGameObject = null;
 
     private Deck deck;
 
@@ -38,10 +42,10 @@ public class Arbiter : MonoBehaviour
         }
     }
 
-    GameObject InstantiateNewPlayer(GameObject panel, string playerName)
+    Candidate InstantiateNewPlayer(GameObject panel, string playerName)
     {
-        GameObject newPlayerZone = Instantiate(playerZone, panel.transform);
-        newPlayerZone.GetComponent<Candidate>().Name = playerName;
+        Candidate newPlayerZone = Instantiate(playerZone, panel.transform);
+        newPlayerZone.Name = playerName;
         deck.DealToPlayer(newPlayerZone, 1);
         return newPlayerZone;
     }
