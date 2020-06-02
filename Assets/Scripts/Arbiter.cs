@@ -12,6 +12,9 @@ public class Arbiter : MonoBehaviour
     private Candidate playerZone = null;
 
     [SerializeField]
+    private GameObject playersTable = null;
+
+    [SerializeField]
     private GameObject deckGameObject = null;
 
     private Deck deck;
@@ -35,16 +38,15 @@ public class Arbiter : MonoBehaviour
 
     void SetupPlayers()
     {
-        GameObject panel = GameObject.Find("Players");
         for (int i = 1; i < PlayerCount; i++)
         {
-            InstantiateNewPlayer(panel, $"Player {i + 1}");
+            InstantiateNewPlayer($"Player {i + 1}");
         }
     }
 
-    Candidate InstantiateNewPlayer(GameObject panel, string playerName)
+    Candidate InstantiateNewPlayer(string playerName)
     {
-        Candidate newPlayerZone = Instantiate(playerZone, panel.transform);
+        Candidate newPlayerZone = Instantiate(playerZone, playersTable.transform);
         newPlayerZone.Name = playerName;
         deck.DealToPlayer(newPlayerZone, 1);
         return newPlayerZone;
