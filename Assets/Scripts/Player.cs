@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject hand = null;
+    private Candidate myCandidate;
+
+    void Awake()
+    {
+        myCandidate = GetComponent<Candidate>();
+        myCandidate.onReceiveCard = DebugNewCards;
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +23,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void DebugNewCards(GameObject card)
+    {
+        Instantiate(card, hand.transform);
+        print($"card to debug {card.name}");
     }
 }

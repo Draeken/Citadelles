@@ -297,7 +297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerCount: 5
-  playerZone: {fileID: 1843017664061607977, guid: d63c80cb3eec77041b211b3a8b0e6af5,
+  candidatePlayer: {fileID: 1271283737}
+  candidatePrefab: {fileID: 1843017664061607977, guid: d63c80cb3eec77041b211b3a8b0e6af5,
     type: 3}
   playersTable: {fileID: 47555241}
   deckGameObject: {fileID: 1127079389}
@@ -678,6 +679,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127079389}
   m_CullTransparentMesh: 0
+--- !u!1 &1271283736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1482965913609261408, guid: d63c80cb3eec77041b211b3a8b0e6af5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958949370}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1271283737 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1843017664061607977, guid: d63c80cb3eec77041b211b3a8b0e6af5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1958949370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271283736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 404386e72c66b47438ee1cb48217ebaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1271283740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1271283736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d41afac060432345aeec810762507ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hand: {fileID: 591185507}
 --- !u!1 &1436448530
 GameObject:
   m_ObjectHideFlags: 0

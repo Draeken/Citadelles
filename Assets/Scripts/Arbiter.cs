@@ -9,7 +9,10 @@ public class Arbiter : MonoBehaviour
     private int PlayerCount = 6;
 
     [SerializeField]
-    private Candidate playerZone = null;
+    private Candidate candidatePlayer = null;
+
+    [SerializeField]
+    private Candidate candidatePrefab = null;
 
     [SerializeField]
     private GameObject playersTable = null;
@@ -17,10 +20,12 @@ public class Arbiter : MonoBehaviour
     [SerializeField]
     private GameObject deckGameObject = null;
 
+    private List<Candidate> candidates = new List<Candidate>();
     private Deck deck;
 
     void Awake()
     {
+        candidates.Add(candidatePlayer);
         deck = deckGameObject.GetComponent<Deck>();
     }
 
@@ -40,15 +45,19 @@ public class Arbiter : MonoBehaviour
     {
         for (int i = 1; i < PlayerCount; i++)
         {
-            InstantiateNewPlayer($"Player {i + 1}");
+            InitiateNewPlayer($"Player {i + 1}");
         }
+        candidates.ForEach(delegate(Candidate candidat)
+        {
+            deck.DealToPlayer(candidat, 1);
+        });
     }
 
-    Candidate InstantiateNewPlayer(string playerName)
+    Candidate InitiateNewPlayer(string playerName)
     {
-        Candidate newPlayerZone = Instantiate(playerZone, playersTable.transform);
+        Candidate newPlayerZone = Instantiate(candidatePrefab, playersTable.transform);
         newPlayerZone.Name = playerName;
-        deck.DealToPlayer(newPlayerZone, 1);
+        candidates.Add(newPlayerZone);        
         return newPlayerZone;
     }
 }

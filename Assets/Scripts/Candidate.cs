@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void OnReceiveCard(GameObject card);
+
 public class Candidate : MonoBehaviour
 {
+    public OnReceiveCard onReceiveCard;
     private List<GameObject> hand = new List<GameObject>();
 
     [SerializeField]
@@ -17,18 +20,22 @@ public class Candidate : MonoBehaviour
         set
         {
             _name = value;
-           uiName.text = _name;
+            uiName.text = _name;
         }
     }
 
     public void ReceiveCard(GameObject card)
     {
-        hand.Add(card);
+        hand.Add(card);     
+        if (onReceiveCard != null)
+        {
+            onReceiveCard(card);
+        }
     }
 
     void Awake()
     {
-       uiName.text = _name;
+        uiName.text = _name;
     }
     // Start is called before the first frame update
     void Start()
