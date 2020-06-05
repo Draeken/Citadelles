@@ -6,7 +6,7 @@ public delegate void OnReceiveCard(GameObject card);
 
 public class Candidate : MonoBehaviour
 {
-    public OnReceiveCard onReceiveCard;
+    public event OnReceiveCard onReceiveCard;
     private List<GameObject> hand = new List<GameObject>();
 
     [SerializeField]

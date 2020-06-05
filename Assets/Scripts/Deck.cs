@@ -11,7 +11,8 @@ public class DeckCardInfo
 
 public class Deck : MonoBehaviour
 {
-    public List<DeckCardInfo> cardInfos;
+    [SerializeField]
+    private List<DeckCardInfo> cardInfos = null;
     private List<GameObject> deck = new List<GameObject>();
 
     public void DealToPlayer(Candidate player, int count)

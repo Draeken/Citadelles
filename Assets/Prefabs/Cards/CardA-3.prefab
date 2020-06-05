@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2398891497375082175, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_Name
-      value: CardComMarket
+      value: CardA-3
       objectReference: {fileID: 0}
     - target: {fileID: 2398891497375082175, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
@@ -75,12 +75,12 @@ PrefabInstance:
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -232.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -183.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}

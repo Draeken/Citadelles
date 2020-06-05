@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     void Awake()
     {
         myCandidate = GetComponent<Candidate>();
-        myCandidate.onReceiveCard = DebugNewCards;
+        myCandidate.onReceiveCard += DebugNewCards;
     }
     // Start is called before the first frame update
     void Start()
