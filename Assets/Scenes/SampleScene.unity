@@ -455,6 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 591185508}
   - component: {fileID: 591185509}
+  - component: {fileID: 591185510}
   m_Layer: 5
   m_Name: Hand
   m_TagString: Untagged
@@ -489,6 +490,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591185507}
   m_CullTransparentMesh: 0
+--- !u!114 &591185510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591185507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 10
+    m_Right: 10
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 20
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
 --- !u!1 &909737556
 GameObject:
   m_ObjectHideFlags: 0
@@ -641,8 +667,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardInfos:
+  - count: 4
+    card: {fileID: 3763758679348896252, guid: f5c8264e0a9770049b2ace9daa0f043a, type: 3}
+  - count: 3
+    card: {fileID: 7989984120888998747, guid: d19a61c5200127f4b9c637d40607d1c5, type: 3}
   - count: 5
-    card: {fileID: 4154360347125246051, guid: 693d542abfb9e7c419a08b3e3207e4d5, type: 3}
+    card: {fileID: 4850566580704473712, guid: 218e694026288fd419ddb240838bca95, type: 3}
+  - count: 4
+    card: {fileID: 2161622703895262854, guid: 0c51a81d3ef9d9c4382dc96264cac553, type: 3}
+  - count: 2
+    card: {fileID: 4378108606950302209, guid: dc0fee3863049154d8155b73f39bb1b3, type: 3}
+  - count: 3
+    card: {fileID: 5694081809536980189, guid: 0439e82be8e6b5c4994e299b740dfc1f, type: 3}
+  - count: 3
+    card: {fileID: 2621202721323305712, guid: c1b66b670d2a9df4e8ade02f1bbcafed, type: 3}
 --- !u!114 &1127079392
 MonoBehaviour:
   m_ObjectHideFlags: 0

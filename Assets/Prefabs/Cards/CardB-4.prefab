@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1796324523237265116
+--- !u!1001 &2212394395547918060
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,17 +10,22 @@ PrefabInstance:
     - target: {fileID: 2398891497375082175, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_Name
-      value: CardA-3
+      value: CardB-4
       objectReference: {fileID: 0}
     - target: {fileID: 2398891497375082175, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_TagString
-      value: Trade
+      value: Noble
       objectReference: {fileID: 0}
     - target: {fileID: 3066826452873821968, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: value
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066826452873821968, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
+        type: 3}
+      propertyPath: kind
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
@@ -40,17 +45,17 @@ PrefabInstance:
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4029809618871099787, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
@@ -130,17 +135,17 @@ PrefabInstance:
     - target: {fileID: 7195258059031382812, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.09758164
+      value: 0.9150943
       objectReference: {fileID: 0}
     - target: {fileID: 7195258059031382812, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7264151
+      value: 0.8927133
       objectReference: {fileID: 0}
     - target: {fileID: 7195258059031382812, guid: 4ffee9dbd376daf40a78d850bd1cf5bb,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.044544343
+      value: 0.20287468
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ffee9dbd376daf40a78d850bd1cf5bb, type: 3}

@@ -8,6 +8,7 @@ TagManager:
   - Religious
   - Military
   - Special
+  - Noble
   layers:
   - Default
   - TransparentFX
