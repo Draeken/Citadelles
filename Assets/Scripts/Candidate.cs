@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public delegate void OnReceiveCard(Card card);
+public delegate void OnTurnSet();
 
 public class Candidate : MonoBehaviour
 {
     public event OnReceiveCard onReceiveCard;
+    public event OnTurnSet onTurnSet;
     private List<Card> hand = new List<Card>();
 
     [SerializeField]
@@ -26,11 +28,13 @@ public class Candidate : MonoBehaviour
 
     public void ReceiveCard(Card card)
     {
-        hand.Add(card);     
-        if (onReceiveCard != null)
-        {
-            onReceiveCard(card);
-        }
+        hand.Add(card);
+        onReceiveCard?.Invoke(card);
+    }
+
+    public void SetMyTurn()
+    {
+        onTurnSet?.Invoke();
     }
 
     void Awake()

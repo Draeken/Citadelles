@@ -22,6 +22,7 @@ public class Arbiter : MonoBehaviour
 
     private List<Candidate> candidates = new List<Candidate>();
     private Deck deck;
+    private int activeCandidateIndex = 0;
 
     void Awake()
     {
@@ -33,12 +34,18 @@ public class Arbiter : MonoBehaviour
     void Start()
     {
         SetupPlayers();
+        SetPlayerTurn();
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    void SetPlayerTurn()
+    {
+        candidates[activeCandidateIndex].SetMyTurn();
     }
 
     void SetupPlayers()
