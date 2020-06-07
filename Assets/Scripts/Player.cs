@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         
     }
 
-    void DebugNewCards(GameObject card)
+    void DebugNewCards(Card card)
     {
         Instantiate(card, hand.transform);
         print($"card to debug {card.name}");

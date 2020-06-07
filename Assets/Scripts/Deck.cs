@@ -6,14 +6,14 @@ using UnityEngine;
 public class DeckCardInfo
 {
     public int count;
-    public GameObject card;
+    public Card card;
 }
 
 public class Deck : MonoBehaviour
 {
     [SerializeField]
     private List<DeckCardInfo> cardInfos = null;
-    private List<GameObject> deck = new List<GameObject>();
+    private List<Card> deck = new List<Card>();
 
     public void DealToPlayer(Candidate player, int count)
     {
@@ -29,7 +29,7 @@ public class Deck : MonoBehaviour
         {
             for (int i = 0; i < cardInfo.count; i++)
             {
-                int index = Mathf.RoundToInt(Random.Range(0, deck.Count - 1));
+                int index = Mathf.RoundToInt(Random.Range(0, deck.Count + 1));
                 deck.Insert(index, cardInfo.card);
             }
         }
@@ -46,13 +46,13 @@ public class Deck : MonoBehaviour
         
     }
 
-    GameObject Draw()
+    Card Draw()
     {
         if (deck.Count <= 0)
         {
             return null;
         }
-        GameObject card = deck[deck.Count - 1];
+        Card card = deck[deck.Count - 1];
         deck.RemoveAt(deck.Count - 1);
         return card;
     }

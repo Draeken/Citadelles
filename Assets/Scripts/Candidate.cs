@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void OnReceiveCard(GameObject card);
+public delegate void OnReceiveCard(Card card);
 
 public class Candidate : MonoBehaviour
 {
     public event OnReceiveCard onReceiveCard;
-    private List<GameObject> hand = new List<GameObject>();
+    private List<Card> hand = new List<Card>();
 
     [SerializeField]
     private UnityEngine.UI.Text uiName = null;
@@ -24,7 +24,7 @@ public class Candidate : MonoBehaviour
         }
     }
 
-    public void ReceiveCard(GameObject card)
+    public void ReceiveCard(Card card)
     {
         hand.Add(card);     
         if (onReceiveCard != null)

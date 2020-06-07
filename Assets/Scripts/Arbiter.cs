@@ -49,7 +49,7 @@ public class Arbiter : MonoBehaviour
         }
         candidates.ForEach(delegate(Candidate candidat)
         {
-            deck.DealToPlayer(candidat, 1);
+            deck.DealToPlayer(candidat, 2);
         });
     }
 
